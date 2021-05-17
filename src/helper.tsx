@@ -74,6 +74,7 @@ export function SceneLink(props: { onClick?: () => void, nextScene?: any, childr
     }
 
     return (
+        // eslint-disable-next-line
         <a href="#" className="App-link" onClick={handler}>{props.children}</a>
     );
 }
