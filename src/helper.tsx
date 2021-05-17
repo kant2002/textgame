@@ -27,9 +27,9 @@ export class WorldSceneBase<TWorld extends BaseWorld> extends React.Component {
   
       this.forceUpdate();
     }
-  }
+}
   
-  interface SceneSelectorProps {
+interface SceneSelectorProps {
     initialScene: any;
 }
 
@@ -52,11 +52,11 @@ export class SceneSelector extends React.Component<SceneSelectorProps, SceneSele
 
     render() {
         return (
-            <div>
+            <React.Fragment>
                 {this.state.scene
                     ? React.createElement(this.state.scene)
                     : "Nothing is defined here."}
-            </div>
+            </React.Fragment>
         );
     }
 }
@@ -74,7 +74,7 @@ export function SceneLink(props: { onClick?: () => void, nextScene?: any, childr
     }
 
     return (
-        <a href="#" onClick={handler}>{props.children}</a>
+        <a href="#" className="App-link" onClick={handler}>{props.children}</a>
     );
 }
 
